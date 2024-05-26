@@ -48,12 +48,13 @@ class TodoTile extends StatelessWidget {
                 style: TextStyle(
                     decoration: taskCompleted
                         ? TextDecoration.lineThrough
-                        : TextDecoration.none),
+                        : TextDecoration.none,
+                    fontWeight: FontWeight.bold),
               ),
             ],
           ),
           decoration: BoxDecoration(
-            color: Colors.yellow,
+            color: Theme.of(context).cardColor,
             borderRadius: BorderRadius.circular(12),
           ),
         ),

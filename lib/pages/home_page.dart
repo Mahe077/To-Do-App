@@ -71,12 +71,18 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
         backgroundColor: Theme.of(context).colorScheme.secondaryContainer,
         appBar: AppBar(
-          title: Center(child: Text("TO DO")),
-          backgroundColor: Theme.of(context).colorScheme.primaryContainer,
+          title: Center(
+            child: Text(
+              "TO DO",
+              style: TextStyle(fontWeight: FontWeight.bold),
+            ),
+          ),
+          backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         ),
         floatingActionButton: FloatingActionButton(
           onPressed: createNewTask,
           child: Icon(Icons.add),
+          tooltip: 'add',
         ),
         body: ListView.builder(
           itemCount: db.toDoList.length,
